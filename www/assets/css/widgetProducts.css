@@ -1,0 +1,78 @@
+.v65-widgetProduct-addToCart-priceWrapper {
+  display: block;
+  margin-bottom: 5px; }
+
+.v65-widgetProduct-addToCart {
+  margin-bottom: 1em; }
+  .v65-widgetProduct-addToCart form {
+    margin-bottom: 0.5em;
+    padding: 0; }
+  .v65-widgetProduct-addToCart fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .v65-widgetProduct-addToCart legend {
+    display: none; }
+
+.v65-widgetProduct-addToCart-priceWrapper {
+  display: inline;
+  margin-right: 1em; }
+  @media screen and (max-width: 970px) {
+    .v65-widgetProduct-addToCart-priceWrapper {
+      display: block;
+      margin-bottom: 0.5em; } }
+
+.v65-widgetProduct-addToCart-price {
+  display: inline;
+  font-size: 1.333333333333em; }
+  @media screen and (max-width: 580px) {
+    .v65-widgetProduct-addToCart-price {
+      font-size: 1.5em;
+      font-weight: bold; } }
+
+.v65-widgetProduct-addToCart-originalPrice {
+  color: #666;
+  display: inline;
+  letter-spacing: -1;
+  margin-right: 2px;
+  text-decoration: line-through; }
+
+.v65-widgetProduct-addToCart-salePrice {
+  display: inline; }
+
+.v65-widgetProduct-addToCart-unitDescription {
+  display: inline;
+  bottom: 1ex;
+  font-size: 0.75em;
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative; }
+
+.v65-widgetProduct-addToCart-productSKU {
+  display: none; }
+
+.v65-widgetProduct-addToCart-caseQuantity {
+  display: inline; }
+
+.v65-widgetProduct-addToCart-quantity {
+  display: inline; }
+
+.v65-widgetProduct-addToCart-button {
+  display: inline; }
+  @media screen and (max-width: 580px) {
+    .v65-widgetProduct-addToCart-button button {
+      width: 50%; } }
+
+/* b. Add To Cart - Volume Based Pricing
+-------------------------------------------------------------- */
+.v65-widgetProduct-volumeBasePricing {
+  font-size: 0.9em;
+  width: auto; }
+
+.v65-widgetProduct-volumeBasePricing-description {
+  display: inline;
+  margin-right: 10px; }
+
+.v65-widgetProduct-volumeBasePricing-price {
+  display: inline; }
