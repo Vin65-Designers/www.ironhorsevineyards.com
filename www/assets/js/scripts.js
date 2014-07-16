@@ -4,7 +4,9 @@
 			v65.global.addButtonListener();
 			v65.global.addToCartListener();
 			v65.global.continueShopping();
+			v65.global.insertLogo();
 			v65.global.mainMenuHover();
+			v65.global.removeEmptyTags();
 		},
 		addButtonListener : function(){
 			if(document.addEventListener){
@@ -21,10 +23,26 @@
 				$(".v65-cartCheckOutButtons a.linkAltBtn, #v65-checkCartSummaryMoreOptions a:contains('Continue shopping')").attr("href", v65.cookies.readCookie("continueShoppingURL"));
 			}
 		},
+		insertLogo : function(){
+			// -1 because of hidden home link
+			var nav = $(".mainMenu > ul > li"),
+					navLength = nav.length - 1;
+
+			nav.eq(navLength / 2).after('<li class="centeredLogo"></li>');
+			$(".centeredLogo").html($('.logo').clone());
+		},
 		mainMenuHover : function(){
 			$(".mainMenu ul li ul li").hover(function(){
 				$(this).parent().parent().children("a").toggleClass("hover");
 			});
+		},
+		removeEmptyTags : function(){
+			// Content blocks are surrounded by empty P tags
+			$('p').each(function() {
+				if($(this).html().replace(/\s/g, '').length == 0)
+					$(this).remove();
+				}
+			);
 		}
 	},
 	cookies : {
@@ -72,11 +90,11 @@
 		initPhotoGallery : function(){
 			if($("#pagePhotoGallery").length){
 				$("#pagePhotoGallery").v65PhotoGallery({
+					galleryHeight : null,
+					galleryWidth : null
 					/*
 						Uncomment the code below if you want to change how the photo gallery is displayed.
 
-						galleryHeight : 420, // This value is translated to 420px and will change the photogallery height
-						galleryWidth : 630, // This value is translated to 630px and will change the photogallery width
 						pauseTime : 5000, // Adjust how long the image is displayed for. Value is in milliseconds
 						animSpeed : 1000, // Adjust the transition speed between images. Value is in milliseconds
 						controlNav : false, // hide the 1,2,3 navigation
