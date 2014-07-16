@@ -1,9 +1,13 @@
+.v65-title{
+	font-size: 1.5rem;
+}
+
 #v65-fieldset-wholesalerInfo, #v65-fieldset-billingInfo, 
 #v65-fieldset-shippingOptions, #v65-fieldset-shippingInfo, 
 #v65-fieldset-paymentMethod, #v65-fieldset-sourceCode, 
-#v65-fieldset-usernamePassword{
+#v65-fieldset-usernamePassword, #v65-checkoutCartSummaryWrapper{
 	@media screen and (max-width: 725px){
-		width: 98%;
+		width: 100%;
 	}
 }
 
@@ -14,6 +18,37 @@
 .v65-productGroup-product{
 	&:first-child{
 		margin-left: 0;
+	}
+}
+
+.product2Up{
+	margin-bottom: 2rem;
+
+	@media #{$medium-up}{
+		margin-bottom: 0;
+	}
+
+	.v65-product-title{
+		font-size: $h3-font-size;
+
+		a{
+			color: #494949;
+			text-decoration: none;
+		}
+	}
+
+	.v65-product-addToCart-priceWrapper, .v65-product-addToCart-quantity{
+		display: inline-block
+	}
+
+	.v65-product-addToCart-quantity{
+		input{
+			line-height: 1;
+		}
+	}
+
+	.v65-product-addToCart-button{
+		display: block;
 	}
 }
 
@@ -41,8 +76,85 @@
 	}
 }
 
+.v65-addToCart{
+	form{
+
+	}
+
+	input{
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
+}
+
+#v65-addProductReview, .v65-form, .v65-customForm{
+	input[type=checkbox]{
+		margin-bottom: 0;
+		vertical-align: initial;
+	}
+
+	.submitLabel{
+		display: none;
+	}
+}
+
+#v65-CouponCode, #v65-GiftCode{
+	display: inline-block;
+}
+
+input[type=email], input[type=password], input[type=tel], input[type=text], input[type=username]{
+	line-height: inherit;
+}
+
+#v65-checkBilling select[name=BillBirthDay]{
+	@media #{$small-only}{
+		margin: 0;
+	}
+}
+
+#v65-checkoutCartSummaryMini, #v65-checkCartSummaryMoreOptions{
+	float: none;
+	width: 100%;
+
+	table{
+		border: 0;
+	}
+}
+
+.right, .left{
+	float: none !important;
+}
+
+#v65-checkoutFormWrapper{
+	width: 100%;
+}
+
+#v65-checkoutCartSummaryWrapper, #v65-fieldset-wholesalerInfo, 
+#v65-fieldset-billingInfo, #v65-fieldset-shippingOptions, 
+#v65-fieldset-shippingInfo, #v65-fieldset-paymentMethod, 
+#v65-fieldset-sourceCode, #v65-fieldset-usernamePassword{
+	@media #{$small-only}{
+		width: 100%;
+	}
+}
+
 .print{
 	@media screen and (max-width: 720px){
 		margin: 0 10px;
 	}
+}
+
+.v65-cartPaymentOptions{
+	@media #{$small-only}{
+		margin-bottom: 1rem;
+		float: none;
+	}
+}
+
+select#shipTo{
+	margin-top: 0.5rem;
+}
+
+.varietal-details .image{
+	margin-bottom: 0.5rem;
 }

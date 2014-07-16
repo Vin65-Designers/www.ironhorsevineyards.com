@@ -1,10 +1,6 @@
-#v65-modalContentHeader{
-	background: $headingFontColor;
-}
-
 .content{
-	background: $homepageContentColor;
-	box-shadow: 0 0 20px $contentBoxShadow;
+	font-size: rem-calc(12px);
+	margin-bottom: 2rem;
 }
 
 	.pageContent{
@@ -18,10 +14,15 @@
 	}
 
 /* ----- a. Homepage Styles ----- */
-@import 'content_home';
+@import 'content_features';
 
 /* ----- b. Page Styles ----- */
 @import 'content_page';
 
 /* ----- c. Store Styles ----- */
 @import 'content_store';
+
+#v65-modalContentHeader{
+	height: auto;
+	padding: 0.5rem;
+}

@@ -36,9 +36,3 @@
 		margin-right: 0;
 	}
 }
-
-.v65-featureRight, .v65-right, 
-.v65-featureLeft, .v65-left, 
-.v65-border{
-	@include boxSizing;
-}

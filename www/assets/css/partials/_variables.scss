@@ -1,32 +1,124 @@
-@import 'themes/themeSettings_grey';
-// @import 'themes/themeSettings_black';
-// @import 'themes/themeSettings_red';
-// @import 'themes/themeSettings_yellow';
+// Colors
+$grey: #636363;
+$grey-light: #ccc;
+$grey-dark: #333;
+$grey-dark-alt: #494949;
+$black: #000;
+$white: #fff;
+$offWhite: #f1f1f1;
+$blue: #369;
+$blue-light: #3b73ac;
+$blue-dark: #2e5b87;
+$offBlack: #1b1b1b;
+$flatgrey: #999999;
+$orange: #ba8637;
+
+// Font Colors
+$fontColor: $offBlack; // Main Body Content font color
+$linkColor: $orange; // Main Body content link color
+
+// Backgroung Color
+$backgroundColor: $offWhite; // Main Background Color
+$homepageContentColor: $white; // Homepage content background color
+$contentBackgroundColor: $white; //Content background color
+$contentBoxShadow: $flatgrey;
+
+// Heading Colors
+$headingFontColor: $orange; // Default Heading Font Color
+$headerFontColor: $grey-dark; // Font Color outside the container
+$headerFontColorHover: $black; // Hover font color outside the container
+
+// User Tools Colors
+$topBarColor: $black; // User Tools background color
+$userToolsLinkColor: $grey-light; // Link Color for user tools
+
+// Navigation Colors
+$navLinkColor: $offBlack; //Font Color for main navigation
+$navLinkHover: $orange; //Font Hover for main navigation
+
+$navSelected: $orange;
+$leftNavSelected: $orange;
+
+$subNavLinkColor: $offBlack; //Font Color for sub navigation
+$subNavLinkHover: $orange; //Font Color for sub navigation hover
+$subNavBackgroundColor: $white; //Background Color for sub navigation
+
+// Footer Colors
+$footerColor: $grey; //Footer Color
+$footerLink: $grey-light; // Footer Link
+$footerLinkHover: $white; // Footer Link Hover
+
+$footerFontColor: $grey-dark; //Font Color outside the container
+$footerFontColorHover: $black; // Hover font color outside the container
+
+// Border Colors
+$borderColor: $grey-light; // Main Border Color
+
+// Button Colors
+
+@mixin mainButtonColor() {
+	@include gradient($blue-light, $blue-dark); // Main Button Color
+} 
+
+@mixin mainButtonHover() {
+	@include gradient(lighten($blue-light, 5%), lighten($blue-dark, 5%));
+}
+
+// Form Colors
+$quanityForm: $grey-light; // Add to cart quanity input form field background color.
+$quanityFormFont: $black; // Add to cart quanity input form field font color.
+
+// Back to Top Colors
+$backToTop: $grey-dark; // Back to top button color
+$backToTopFont: $white; // Back to top button font color
+
+// Logo Settings
+
+$logo: 'logo.png';
+$logo-retina: 'logo@2x.png';
 
 // Global Fonts
+
 $georgia: Georgia, serif;
-$lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;	
+$lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$arial: arial, sans-serif;
+
+@mixin futura-light{
+	font-family: "futura-pt-n3", "futura-pt", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+@mixin futura-book{
+	font-family: "futura-pt-n4", "futura-pt", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin garamond-light{
+	font-family: "garamond-premier-pro-display-n3","garamond-premier-pro-display",serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+@mixin garamond-regular{
+	font-family: "garamond-premier-pro-display-n4","garamond-premier-pro-display",serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin garamond-bold{
+	font-family: "garamond-premier-pro-display-n7","garamond-premier-pro-display",serif;
+	font-style: normal;
+	font-weight: 700;
+}
 
 // Global Variables
-$maxWidth: 990px;
-$fontFamily: $lucida;
+
+$fontFamily: $arial;
 $headingFontFamily: $georgia;
 
-
-@mixin gradient($color1, $color2){
-	background-color: $color1;
-	background-image: -webkit-linear-gradient(top, $color1, $color2);
-	background-image: -moz-linear-gradient(top, $color1, $color2);
-	background-image: -ms-linear-gradient(top, $color1, $color2);
-	background-image: -o-linear-gradient(top, $color1, $color2);
-	background-image: linear-gradient(top, $color1, $color2);
-}
-
-@mixin boxSizing{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
+// Helpers
 
 .hideText{
 	overflow:hidden;
@@ -38,3 +130,29 @@ $headingFontFamily: $georgia;
 		height:100%;
 	}
 }
+
+// Foundation Overrides
+
+@import "foundation/functions";
+
+$global-radius: 5px;
+
+// Changed to 580 for small range max to fit with Vin65 responsive base breakpoints
+$small-range: (0em, 36.25em); /* 0, 580px */ 
+$medium-range: (36.3125em, 64em); /* 581px, 1024px */
+
+$row-width: 59.4rem;
+
+// Button Default Color
+$primary-color: $orange;
+$alt-color: $grey-light;
+
+// Heading Font Sizes
+$h1-font-size: rem-calc(37);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(25);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+
+// Form customizations
+$legend-bg: none;
